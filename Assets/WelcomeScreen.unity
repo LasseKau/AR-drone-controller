@@ -431,7 +431,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Welcome to \nAR Drone Game"
+  m_Text: '
+
+    AR Drone
+
+'
 --- !u!222 &951997778
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -496,8 +500,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c4e7beb9d33f89d4980b1923e06e5b0a, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -583,9 +587,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Developed by
-
-    Anubhav Madhav'
+  m_Text: 
 --- !u!222 &1422672983
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -663,7 +665,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LET'S FLY
+  m_Text: 'Play
+
+'
 --- !u!222 &1807356821
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -846,7 +850,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7830189, g: 0.44691178, b: 0.39520293, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.764151, g: 0.7467252, b: 0.74612856, a: 1}
     m_PressedColor: {r: 0.8490566, g: 0.38047346, b: 0.7877645, a: 1}
     m_SelectedColor: {r: 0.47138664, g: 0.9339623, b: 0.72814804, a: 1}
