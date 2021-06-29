@@ -5,27 +5,44 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     public GameObject _Bomb;
+
     public DroneController droneController;
-    //private Transform transform;
-    ///private Transform transformPos;
-    public Quaternion MyGameObjectRotation;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //transform = gameObject.GetComponent<Transform>();
-    }
+    // The target marker.
+    ///public float speed = 1.0f;
+
+    //public Quaternion MyGameObjectRotation;
 
     public void DropBomb()
     {
-        Instantiate(_Bomb, droneController.transform.position, MyGameObjectRotation);
-        //Debug.Log("drop bomb");
+        //// Determine which direction to rotate towards
+        //Vector3 targetDirection = new Vector3(180.0f, 0, 0);
+
+        //// The step size is equal to speed times frame time.
+        //float singleStep = speed * Time.deltaTime;
+
+        //// Rotate the forward vector towards the target direction by one step
+        //Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+        //// Draw a ray pointing at our target in
+        //Debug.DrawRay(transform.position, newDirection, Color.red);
+
+        Instantiate(_Bomb, droneController.transform.position, transform.rotation);
+
+        Debug.Log("drop bomb");
     }
 
     public void Update()
     {
-        if (_Bomb.activeSelf)
-        {
-            //Debug.Log("active self");
-        }
+        // Determine which direction to rotate towards
+        //Vector3 targetDirection = target.position - transform.position;
+
+        //// The step size is equal to speed times frame time.
+        //float singleStep = speed * Time.deltaTime;
+
+        //// Rotate the forward vector towards the target direction by one step
+        //Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+        //// Draw a ray pointing at our target in
+        //Debug.DrawRay(transform.position, newDirection, Color.red);
     }
 }
