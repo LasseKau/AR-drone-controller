@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8390671136059157882}
   m_Layer: 0
   m_Name: AR Default Plane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f66da7470dce8f4d821d71dd2b1d4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DestroyOnRemoval: 1
+  m_DestroyOnRemoval: 0
   m_VertexChangedThreshold: 0.01
 --- !u!114 &7790096359518596173
 MonoBehaviour:
@@ -70,7 +70,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8147884998235801327}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1

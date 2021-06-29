@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class BombTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    public GameObject _Explosion;
+    private Rigidbody rb;
 
+    private void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
-    void OnTriggerStay(Collider col)
+    void OnCollisionEnter(Collision col)
     {
-
-        Debug.Log("Enter");
-
-        if (col.gameObject.tag == "Bomb")
+        if (col.gameObject.CompareTag("Plane"))
         {
-            Debug.Log("This is an item!");
+            StartCoroutine(ExplosionCoroutine());
         }
-
     }
+
+    IEnumerator ExplosionCoroutine()
+    {
+        Instantiate(_Explosion, this.gameObject.transform.position, transform.rotation);
+        rb.useGravity = false;
+        yield return new WaitForSeconds(0.5f);
+
+        Destroy(this.gameObject);
+    }
+
+
 }
