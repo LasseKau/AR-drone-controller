@@ -712,6 +712,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &693646765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7964553870842825872, guid: af8af76249283b34bab2ea082f2f4ded,
+    type: 3}
+  m_PrefabInstance: {fileID: 1521898907}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &847310452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,6 +1622,8 @@ MonoBehaviour:
   _DroneController: {fileID: 2139169271}
   _FlyButton: {fileID: 1986828286}
   _LandButton: {fileID: 1225074187}
+  _DroneTransform: {fileID: 2139169273}
+  _InstatiateButton: {fileID: 693646765}
   _Controls: {fileID: 157748851}
   _RaycastManager: {fileID: 980852904}
   _PlaneManager: {fileID: 980852903}
@@ -1635,6 +1649,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2041544570}
     m_Modifications:
+    - target: {fileID: 7964553870842825872, guid: af8af76249283b34bab2ea082f2f4ded,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2139169274}
+    - target: {fileID: 7964553870842825872, guid: af8af76249283b34bab2ea082f2f4ded,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DropBomb
+      objectReference: {fileID: 0}
     - target: {fileID: 7964553870842825873, guid: af8af76249283b34bab2ea082f2f4ded,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2007,7 +2031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2421,3 +2445,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SpeedMultiplier: 5
+--- !u!4 &2139169273 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: bed66fa02a04242a5b1d00c71e6a805f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1662694080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2139169274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139169270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d5db815d1d4794f9467491d218a24a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Bomb: {fileID: 1482907868177756, guid: 7a2bdb904eb0f7546a832172eeefa7d3, type: 3}
+  droneController: {fileID: 2139169271}
+  MyGameObjectRotation: {x: 180, y: 0, z: 0, w: 0}

@@ -12,8 +12,14 @@ public class GameManager : MonoBehaviour
 
     public Button _FlyButton;
     public Button _LandButton;
+	//public GameObject Gun;
 
-    public GameObject _Controls;
+	public Transform _DroneTransform;
+	//public GameObject mag;
+
+	public Button _InstatiateButton;
+
+	public GameObject _Controls;
 
 	//AR
 	public ARRaycastManager _RaycastManager;
@@ -38,8 +44,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _FlyButton.onClick.AddListener(EventOnClickFlyButton);
-		 _LandButton.onClick.AddListener(EventOnClickLandButton);
-    }
+		_LandButton.onClick.AddListener(EventOnClickLandButton);
+		//_InstatiateButton.onClick.AddListener(EventOnShootButtonClicked);
+
+
+	}
 
     // Update is called once per frame
     void Update()
@@ -104,7 +113,31 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-     void EventOnClickFlyButton()
+	public void EventOnShootButtonClicked()
+    {
+		//instantiateButton.onClick.AddListener(() => buttonCallBack(instantiateButton));
+		Debug.Log("works fine");
+	}
+
+	//private void buttonCallBack(Button buttonPressed)
+	//{
+	//	if (buttonPressed == _InstatiateButton)
+	//	{
+	//		//Your code for Instantiate button 
+	//		//Instantiate(_Drone, _DroneTransform.position, _DroneTransform.rotation);
+	//		Debug.Log("testing again");
+	//		OnDisableInstatiate();
+	//	}
+	//}
+
+	//void OnDisableInstatiate()
+	//{
+	//	Debug.Log("onDisable");
+	//	//Un-Register Button Events
+	//	_InstatiateButton.onClick.RemoveAllListeners();
+	//}
+
+	void EventOnClickFlyButton()
     {
 	if(_DroneController.IsIdle())
 	{
